@@ -34,31 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 final double height = Double.valueOf(mHeight);
                 final double weight = Double.valueOf(mWeight);
 
-                double bmi = weight / ((height/100)*(height/100));      String result = String.format("%.2f",bmi);  String mes = getBmiText(bmi);
-
-  /*              AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-
-                dialog.setIcon(R.drawable.bmi);
-                dialog.setTitle("ค่า BMI");
-                dialog.setMessage(result+" BodyState : "+mes);
-
-                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this,"มาหาสถานะร่างกายเรากันเอีกรอบ ",Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-                dialog.setNegativeButton("Exit",new DialogInterface.OnClickListener(){
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-                });
-                dialog.show();      */
-
-
-
+                double bmi = weight / ((height/100)*(height/100));
+                String result = String.format("%.2f",bmi);
+                String mes = getBmiText(bmi);
                 Intent intent = new Intent(MainActivity.this, Page2MainActivity.class);
 
                 intent.putExtra("result",result);
@@ -71,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //if out listener use get
     private String getBmiText(double bmi){
         String str = "";
         if(bmi < 18.5){

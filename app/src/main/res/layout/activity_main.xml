@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="#c787e2a1"
+    android:background="#c7d7e4a8"
     android:padding="24dp"
     android:orientation="vertical"
 
@@ -69,10 +69,7 @@
         android:text="calculate"
         android:textSize="24dp"
         android:textColor="#000000"
-
-        android:onClick="onClickNext"
         android:layout_gravity="center_horizontal"/>
-
 
 
 </LinearLayout>
